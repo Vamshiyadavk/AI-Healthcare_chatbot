@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthBot – AI Symptom Checker</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:    #2563eb;
+      --primary-d:  #1d4ed8;
+      --accent:     #06b6d4;
+      --success:    #16a34a;
+      --danger:     #dc2626;
+      --bg:         #f0f9ff;
+      --card:       #ffffff;
+      --text:       #1e293b;
+      --muted:      #64748b;
+      --border:     #e2e8f0;
+      --radius:     16px;
+      --shadow:     0 4px 24px rgba(37,99,235,0.10);
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-brand { display: flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .9rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .badge-api {
+      background: var(--primary); color: #fff; font-size: .7rem;
+      padding: 2px 8px; border-radius: 999px; font-weight: 600;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+    .hero-icon { font-size: 4rem; margin-bottom: 1rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.2; }
+    .hero h1 span { color: var(--primary); }
+    .hero p { margin-top: .8rem; color: var(--muted); font-size: 1.1rem; max-width: 500px; margin-inline: auto; }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+    }
+    .main-card {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+    }
+
+    /* ── FORM ── */
+    .form-label { font-weight: 600; font-size: .95rem; margin-bottom: .4rem; display: block; }
+    .form-hint  { color: var(--muted); font-size: .82rem; margin-bottom: .8rem; }
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 1rem;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+      color: var(--text);
+    }
+    textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,.15); }
+    #charCount { font-size: .78rem; color: var(--muted); text-align: right; margin-top: .3rem; }
+
+    /* Symptom tags */
+    .tag-section { margin-top: 1rem; }
+    .tag-section h4 { font-size: .82rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .5rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .tag {
+      padding: .28rem .75rem;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: var(--primary);
+      font-size: .82rem;
+      border: 1px solid #bfdbfe;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .tag:hover { background: #dbeafe; }
+
+    /* ── BUTTON ── */
+    .btn-primary {
+      width: 100%;
+      margin-top: 1.2rem;
+      padding: .9rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, transform .1s;
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
+    }
+    .btn-primary:hover  { background: var(--primary-d); }
+    .btn-primary:active { transform: scale(.98); }
+    .btn-primary:disabled { background: #93c5fd; cursor: not-allowed; }
+
+    /* ── ERROR ALERT ── */
+    .alert-error {
+      background: #fef2f2; border: 1px solid #fca5a5;
+      color: #991b1b; padding: .9rem 1rem; border-radius: 10px;
+      margin-bottom: 1rem; font-size: .9rem;
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .feature-item { text-align: center; padding: 1.2rem .8rem; }
+    .feature-item .icon { font-size: 1.8rem; margin-bottom: .5rem; }
+    .feature-item h4 { font-size: .88rem; font-weight: 700; }
+    .feature-item p  { font-size: .78rem; color: var(--muted); margin-top: .25rem; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      background: #fffbeb; border: 1px solid #fcd34d;
+      color: #92400e; padding: .8rem 1rem;
+      border-radius: 10px; font-size: .8rem;
+      margin-top: 1.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer { text-align: center; color: var(--muted); font-size: .82rem; padding: 2rem 1rem; margin-top: auto; }
+    footer a { color: var(--primary); text-decoration: none; }
+
+    /* ── Spinner ── */
+    .spinner { display: none; width: 20px; height: 20px; border: 3px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="/">🩺 HealthBot</a>
+  <div class="nav-links">
+    <a href="/api/diseases">Diseases <span class="badge-api">API</span></a>
+    <a href="/api/health">Status</a>
+    <a href="https://github.com/vishal-11-22/healthcarebot" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-icon">🩺</div>
+  <h1>AI-Powered <span>Symptom Checker</span></h1>
+  <p>Enter your symptoms below and our ML model will predict possible conditions with confidence scores.</p>
+</div>
+
+<!-- MAIN CARD -->
+<div class="main-card">
+  <div class="card">
+
+    {% if error %}
+    <div class="alert-error">⚠️ {{ error }}</div>
+    {% endif %}
+
+    <form action="/predict" method="POST" id="symptomForm">
+      <label class="form-label" for="symptoms">Describe your symptoms</label>
+      <p class="form-hint">Enter multiple symptoms separated by commas. Be as specific as possible.</p>
+
+      <textarea
+        id="symptoms"
+        name="symptoms"
+        placeholder="e.g. fever, headache, sore throat, fatigue …"
+        maxlength="500"
+        required
+      >{{ request.form.get('symptoms', '') }}</textarea>
+      <div id="charCount">0 / 500</div>
+
+      <!-- Quick-add symptom tags -->
+      <div class="tag-section">
+        <h4>Common symptoms – click to add</h4>
+        <div class="tags" id="tagContainer">
+          {% set common = ['fever','cough','headache','fatigue','nausea','vomiting',
+                           'diarrhea','sore throat','chest pain','shortness of breath',
+                           'runny nose','dizziness','rash','joint pain','abdominal pain'] %}
+          {% for s in common %}
+          <span class="tag" onclick="addTag('{{ s }}')">+ {{ s }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary" id="submitBtn">
+        <span id="btnText">🔍 Analyse Symptoms</span>
+        <div class="spinner" id="spinner"></div>
+      </button>
+    </form>
+
+    <!-- Features -->
+    <div class="features">
+      <div class="feature-item">
+        <div class="icon">🧠</div>
+        <h4>ML Ensemble</h4>
+        <p>NB + Random Forest + Logistic Regression</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">📊</div>
+        <h4>262 Diseases</h4>
+        <p>Trained on a diverse clinical dataset</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">🔌</div>
+        <h4>REST API</h4>
+        <p>JSON endpoint for developers</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">🏠</div>
+        <h4>Remedies</h4>
+        <p>Home care suggestions & severity ratings</p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      ⚠️ <strong>Disclaimer:</strong> HealthBot is for educational purposes only and is <em>not</em> a substitute for professional medical advice. Always consult a qualified healthcare provider for diagnosis and treatment.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Built by <a href="https://github.com/vishal-11-22" target="_blank">Vishal Reddy</a> &nbsp;·&nbsp;
+  Powered by Flask &amp; scikit-learn &nbsp;·&nbsp;
+  <a href="/api/health">API Health</a>
+</footer>
+
+<script>
+  const ta       = document.getElementById('symptoms');
+  const counter  = document.getElementById('charCount');
+  const form     = document.getElementById('symptomForm');
+  const btn      = document.getElementById('submitBtn');
+  const spinner  = document.getElementById('spinner');
+  const btnText  = document.getElementById('btnText');
+
+  ta.addEventListener('input', () => {
+    counter.textContent = ta.value.length + ' / 500';
+  });
+
+  function addTag(symptom) {
+    const current = ta.value.trim();
+    const parts   = current ? current.split(',').map(s => s.trim()).filter(Boolean) : [];
+    if (!parts.includes(symptom)) {
+      parts.push(symptom);
+      ta.value = parts.join(', ');
+      counter.textContent = ta.value.length + ' / 500';
+      ta.focus();
+    }
+  }
+
+  form.addEventListener('submit', () => {
+    btn.disabled     = true;
+    btnText.textContent = 'Analysing …';
+    spinner.style.display = 'block';
+  });
+</script>
+</body>
+</html>

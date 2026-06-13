@@ -1,0 +1,282 @@
+disease,remedy,severity
+Allergies,"Use saline nasal rinse, apply cold compress to itchy areas, local honey",mild
+Asthma,"Practice breathing exercises, use steam inhalation, avoid triggers",serious
+Anemia,"Increase iron-rich foods (spinach, lentils), vitamin C for absorption",moderate
+Arthritis,"Warm compress, gentle exercise, turmeric supplements",moderate
+Appendicitis,Seek immediate medical attention (requires surgery),emergency
+Acne,"Tea tree oil, honey masks, keep skin clean and moisturized",minor
+Alzheimer's,"Mental exercises, Mediterranean diet, regular routine",serious
+Angina,"Rest immediately, chew aspirin (if prescribed), seek medical help",serious
+Anxiety disorder,"Deep breathing, chamomile tea, regular exercise",moderate
+Athlete's foot,"Tea tree oil, keep feet dry, use antifungal powder",minor
+Aphasia,"Speech therapy exercises, picture cards, patience in communication",serious
+Atrial fibrillation,"Limit caffeine, practice stress reduction, seek medical care",serious
+Bronchitis,"Warm fluids, steam inhalation, honey for cough",moderate
+Bursitis,"Rest joint, ice pack, gentle stretching when healed",moderate
+Bell's palsy,"Facial massage, eye protection, warm compress",moderate
+Bulimia,"Professional help required, establish regular eating patterns",serious
+Bipolar disorder,"Consistent sleep schedule, mood tracking, professional care",serious
+Bladder infection,"Drink cranberry juice, stay hydrated, urinate frequently",moderate
+Breast cancer,"Medical treatment required, healthy diet supports recovery",serious
+Bruxism,"Mouth guard, jaw massage, stress reduction",moderate
+Botulism,Seek emergency medical attention immediately,emergency
+Beriberi,"Thiamine supplements, balanced diet, medical supervision",serious
+Common cold,"Drink ginger tea, rest, use steam inhalation, stay hydrated",mild
+Chickenpox,"Oatmeal baths, calamine lotion, keep nails short",moderate
+Cholera,"Oral rehydration solution, seek medical care immediately",emergency
+Cirrhosis,"Medical supervision required, low-sodium diet, no alcohol",serious
+Colitis,"Probiotics, low-fiber diet during flares, stress management",moderate
+Conjunctivitis,"Warm compress, clean with boiled water, avoid rubbing",mild
+Crohn's disease,"Low-residue diet during flares, stress reduction, medical care",serious
+Cystic fibrosis,"Medical treatment essential, chest physiotherapy",serious
+Carpal tunnel syndrome,"Wrist splints, frequent breaks, hand exercises",moderate
+Chronic fatigue syndrome,"Pacing activities, gentle exercise, sleep hygiene",moderate
+Diabetes,"Monitor blood sugar, regular exercise, balanced diet",serious
+Depression,"Regular routine, sunlight exposure, social connection",serious
+Dengue fever,"Stay hydrated, rest, medical monitoring for complications",serious
+Diverticulitis,"Clear liquids during flare, then high-fiber diet",moderate
+Dyslexia,"Structured learning approaches, multisensory techniques",moderate
+Dermatitis,"Oatmeal baths, coconut oil, identify and avoid triggers",mild
+Dementia,"Memory aids, structured routine, cognitive stimulation",serious
+Dyspepsia,"Small frequent meals, avoid spicy/fatty foods, ginger tea",mild
+Dupuytren's contracture,"Hand exercises, massage, medical evaluation",moderate
+Dry eye syndrome,"Warm compress, blink exercises, artificial tears",mild
+Eczema,"Moisturize frequently, oatmeal baths, identify triggers",mild
+Epilepsy,"Medical management essential, avoid flashing lights if sensitive",serious
+Emphysema,"Stop smoking, pursed-lip breathing, avoid pollutants",serious
+Endometriosis,"Heat pad, anti-inflammatory diet, gentle exercise",moderate
+Ear infection,"Warm compress, garlic oil drops (if no perforation)",moderate
+Esophagitis,"Small meals, avoid acidic foods, elevate head while sleeping",moderate
+Erythema nodosum,"Rest, leg elevation, NSAIDs if approved by doctor",moderate
+Essential tremor,"Limit caffeine, stress reduction, weighted utensils",moderate
+Ehlers-Danlos syndrome,"Joint protection, physical therapy, bracing if needed",serious
+Eosinophilic esophagitis,"Identify food triggers, soft diet during flares",moderate
+Fibromyalgia,"Gentle exercise, heat therapy, consistent sleep schedule",moderate
+Food poisoning,"Stay hydrated, BRAT diet (bananas, rice, applesauce, toast)",serious
+Fungal infection,"Keep area dry, tea tree oil, antifungal creams",minor
+Flu (Influenza),"Bed rest, hydrate, use fever reducers (consult doctor if severe)",serious
+Frozen shoulder,"Gentle stretching, heat therapy, gradual movement",moderate
+Farsightedness,"Proper lighting, eye exercises, regular eye exams",minor
+Flat feet,"Supportive shoes, foot exercises, orthotics if needed",minor
+Folliculitis,"Warm compress, antibacterial soap, avoid shaving",minor
+Fragile X syndrome,"Structured routine, sensory-friendly environment",serious
+Fifth disease,"Rest, fluids, antihistamines for itching",mild
+Gastritis,"Small bland meals, chamomile tea, avoid alcohol/spicy food",moderate
+Gout,"Cherry juice, stay hydrated, limit purine-rich foods",moderate
+Glaucoma,"Medical treatment essential, protect eyes from strain",serious
+Giardiasis,"Stay hydrated, bland diet, medical treatment often needed",moderate
+Gallstones,"Low-fat diet, apple juice (some report benefits), medical care",serious
+Gangrene,EMERGENCY - requires immediate medical attention,emergency
+German measles,"Rest, fluids, isolate to prevent spread",moderate
+Gingivitis,"Salt water rinse, proper brushing/flossing, vitamin C",minor
+Graves' disease,"Medical treatment required, stress reduction",serious
+Guillain-Barre syndrome,"Hospitalization required, physical therapy during recovery",emergency
+Hypertension,"Reduce sodium, regular exercise, stress management",serious
+Hemorrhoids,"Sitz baths, high-fiber diet, witch hazel pads",mild
+Hepatitis,"Rest, no alcohol, medical supervision",serious
+Hives,"Cold compress, oatmeal bath, antihistamines",mild
+Heart failure,"Low-sodium diet, fluid monitoring, medical care",serious
+Hernia,"Avoid heavy lifting, medical evaluation for repair",moderate
+Herpes,"Lysine supplements, ice packs for outbreaks, stress reduction",moderate
+Hypothyroidism,"Medical treatment required, selenium-rich foods",serious
+Headache,"Hydration, dark quiet room, peppermint oil temples",mild
+Hay fever,"Local honey, saline rinse, keep windows closed",mild
+Insomnia,"Sleep routine, limit screens before bed, chamomile tea",moderate
+Irritable bowel syndrome,"FODMAP diet, peppermint tea, stress reduction",moderate
+Impetigo,"Keep clean, antibacterial ointment, avoid scratching",minor
+Iron deficiency anemia,"Iron-rich foods with vitamin C, cooking in cast iron",moderate
+Influenza,"Rest, fluids, fever reducers (medical care if severe)",serious
+Ingrown toenail,"Warm water soaks, proper nail trimming technique",minor
+Interstitial cystitis,"Avoid bladder irritants, pelvic floor relaxation",moderate
+Iritis,"Dark glasses, medical attention required",moderate
+Ichthyosis,"Frequent moisturizing, gentle exfoliation, humidifier",moderate
+Infectious mononucleosis,"Rest, throat lozenges, avoid contact sports",moderate
+Jaundice,"Medical evaluation needed, stay hydrated",serious
+Juvenile arthritis,"Gentle exercise, heat/cold therapy, medical care",serious
+Jock itch,"Keep area dry, antifungal cream, wear loose clothing",minor
+Joint dislocation,"Immobilize, ice, seek medical reduction",serious
+Jaw pain,"Soft diet, jaw exercises, stress reduction",moderate
+Japanese encephalitis,"Hospital care required, prevention via vaccine",emergency
+Juvenile diabetes,"Medical management essential, carb counting",serious
+Jejunoileitis,"Small frequent meals, medical treatment needed",serious
+Junctional epidermolysis bullosa,"Wound care, soft clothing, medical supervision",serious
+Jod-Basedow phenomenon,"Medical care required, monitor thyroid function",serious
+Kidney stones,"Hydration, lemon water, pain management",serious
+Kawasaki disease,"Hospital treatment required, monitor heart",emergency
+Keratitis,"Medical attention needed, avoid contacts",moderate
+Klinefelter syndrome,"Testosterone therapy, educational support",serious
+Kyphosis,"Posture exercises, back strengthening, bracing if needed",moderate
+Keloid,"Silicone sheets, massage, medical treatments",minor
+Keratosis pilaris,"Moisturize with lactic acid, gentle exfoliation",minor
+Korsakoff syndrome,"Thiamine supplements, structured environment",serious
+Kaposi's sarcoma,"Medical treatment required, immune support",serious
+Krabbe disease,"Supportive care, physical therapy, medical supervision",serious
+Laryngitis,"Voice rest, steam inhalation, honey lemon tea",mild
+Lupus,"Sun protection, anti-inflammatory diet, medical care",serious
+Lyme disease,"Medical treatment essential, rest during treatment",serious
+Leukemia,"Medical treatment required, infection prevention",serious
+Lung cancer,"Medical treatment essential, quit smoking",serious
+Lice infestation,"Medicated shampoo, comb out nits, wash bedding",minor
+Liver cirrhosis,"Medical supervision, no alcohol, low-sodium diet",serious
+Legionnaires' disease,"Hospital treatment required, supportive care",emergency
+Lactose intolerance,"Lactase supplements, dairy alternatives",minor
+Lead poisoning,"Medical treatment required, remove exposure source",emergency
+Migraine,"Apply cold compress, rest in dark room, drink caffeine in moderation",mild
+Malaria,"Medical treatment essential, prevention via prophylaxis",emergency
+Meningitis,EMERGENCY - requires immediate medical care,emergency
+Multiple sclerosis,"Medical management, physical therapy, stress reduction",serious
+Measles,"Rest, fluids, vitamin A (under medical supervision)",moderate
+Mumps,"Rest, fluids, soft foods, ice packs for swelling",moderate
+Myopia,"Proper lighting, eye exercises, regular eye exams",minor
+Mononucleosis,"Rest, throat lozenges, avoid contact sports",moderate
+Melanoma,"Medical treatment required, sun protection",serious
+Macular degeneration,"AREDS supplements, low vision aids, no smoking",serious
+Norovirus,"Hydration, BRAT diet, disinfect surfaces",moderate
+Narcolepsy,"Scheduled naps, sleep hygiene, medical management",serious
+Nephritis,"Medical evaluation, low-sodium diet, monitor BP",serious
+Neuropathy,"Blood sugar control, foot care, alpha-lipoic acid",moderate
+Nail fungus,"Tea tree oil, keep feet dry, antifungal treatments",minor
+Nearsightedness,"Proper lighting, eye exercises, regular exams",minor
+Nosebleed,"Pinch nose, lean forward, apply ice",minor
+Nonalcoholic fatty liver,"Weight management, exercise, limit sugar",moderate
+Nystagmus,"Visual aids, avoid triggers, medical evaluation",moderate
+Necrotizing fasciitis,EMERGENCY - requires immediate surgery,emergency
+Osteoporosis,"Calcium/vitamin D, weight-bearing exercise, fall prevention",serious
+Osteoarthritis,"Low-impact exercise, heat/cold therapy, weight management",moderate
+Obesity,"Balanced diet, regular exercise, behavioral changes",serious
+Otitis media,"Warm compress, over-the-counter pain relief",moderate
+Ovarian cysts,"Heat pad, pain relievers, medical monitoring",moderate
+Oral thrush,"Salt water rinses, probiotics, antifungal treatments",minor
+Obsessive-compulsive disorder,"Cognitive techniques, stress management, professional help",serious
+Optic neuritis,"Medical evaluation needed, rest eyes",moderate
+Onychomycosis,"Tea tree oil, keep feet dry, antifungal treatments",minor
+Osgood-Schlatter disease,"Ice, rest, knee padding during activities",moderate
+Pneumonia,"Rest, fluids, medical evaluation (antibiotics if bacterial)",serious
+Psoriasis,"Moisturize, sunlight in moderation, stress reduction",moderate
+Parkinson's disease,"Medical management, physical therapy, assistive devices",serious
+Pancreatitis,"NPO (nothing by mouth) during acute phase, then low-fat diet",serious
+Peptic ulcer,"Avoid NSAIDs, small meals, manage stress",moderate
+Polio,"Medical care, physical therapy, assistive devices",serious
+Pink eye,"Warm compress, clean with boiled water, avoid rubbing",mild
+Polycystic ovary syndrome,"Weight management, regular exercise, medical care",moderate
+Peripheral artery disease,"Quit smoking, supervised exercise, foot care",serious
+Pulmonary embolism,EMERGENCY - requires immediate medical care,emergency
+Q fever,"Medical treatment required, rest during recovery",serious
+Quadriplegia,"Physical therapy, assistive devices, medical care",serious
+Quinsy,"Salt water gargles, medical care (may need drainage)",moderate
+Quick's disease,"Medical care for bleeding disorders, avoid injury",serious
+Queensland tick typhus,"Medical treatment required, tick prevention",moderate
+Quincke's edema,"Identify allergens, antihistamines, emergency epinephrine if severe",serious
+Qatar fever,"Medical treatment required, rest, fluids",moderate
+Quartan malaria,"Antimalarial treatment, prevention via prophylaxis",serious
+Quervain's tenosynovitis,"Thumb splint, ice, avoid repetitive motions",moderate
+Quinine toxicity,"Medical attention required, discontinue quinine",serious
+Rheumatoid arthritis,"Medical management, joint protection, gentle exercise",serious
+Rosacea,"Identify triggers, gentle skincare, green tea compresses",moderate
+Rubella,"Rest, fluids, isolate to prevent spread",moderate
+Rabies,EMERGENCY - requires immediate post-exposure prophylaxis,emergency
+Rotavirus,"Oral rehydration, BRAT diet, good hygiene",moderate
+Ringworm,"Antifungal cream, keep area dry, wash bedding",minor
+RSV infection,"Humidifier, nasal suction, medical care for infants",moderate
+Restless legs syndrome,"Iron if deficient, massage, warm baths",moderate
+Raynaud's phenomenon,"Keep warm, avoid caffeine, stress reduction",moderate
+Rickets,"Vitamin D/calcium supplementation, sunlight exposure",moderate
+Sinusitis,"Warm compress on face, steam inhalation, drink peppermint tea",mild
+Shingles,"Cool compresses, calamine lotion, antiviral if early",moderate
+Stroke,"EMERGENCY - call ambulance immediately (FAST: Face, Arms, Speech, Time)",emergency
+Scoliosis,"Physical therapy, bracing if needed, medical monitoring",moderate
+Sarcoidosis,"Medical management, pulmonary rehab if lungs affected",serious
+Sepsis,EMERGENCY - requires immediate hospital care,emergency
+Sickle cell anemia,"Stay hydrated, avoid triggers, pain management",serious
+Sleep apnea,"Weight loss if needed, side sleeping, CPAP if prescribed",serious
+Strep throat,"Salt water gargles, rest, medical care for antibiotics",moderate
+Syphilis,"Medical treatment required, antibiotic therapy",serious
+Tuberculosis,"Medical treatment essential, complete antibiotic course",serious
+Tetanus,EMERGENCY - requires hospital care and antitoxin,emergency
+Thyroid disorder,"Medical management, regular monitoring",serious
+Tinnitus,"White noise, stress reduction, avoid loud noises",moderate
+Tonsillitis,"Salt water gargles, throat lozenges, medical care if bacterial",moderate
+Tourette syndrome,"Stress management, behavioral therapy, support groups",moderate
+Trigeminal neuralgia,"Medical management, soft foods during flares",serious
+Tendinitis,"Rest, ice, compression, elevation (RICE)",moderate
+Thalassemia,"Medical management, possibly blood transfusions",serious
+Toxic shock syndrome,EMERGENCY - requires immediate hospital care,emergency
+Ulcerative colitis,"Low-residue diet during flares, stress management",serious
+Urinary tract infection,"Drink cranberry juice, stay hydrated, urinate frequently",moderate
+Uveitis,"Medical attention needed, dark glasses",moderate
+Uremia,"Medical care essential, dialysis may be needed",serious
+Urticaria,"Cold compress, antihistamines, identify triggers",mild
+Ulnar neuropathy,"Elbow padding, nerve gliding exercises",moderate
+Undulant fever,"Medical treatment required, rest during recovery",serious
+Usher syndrome,"Hearing/vision aids, orientation/mobility training",serious
+Uterine fibroids,"Heat for pain, iron if heavy bleeding, medical options",moderate
+Urethritis,"Hydration, medical treatment if infection present",moderate
+Varicose veins,"Leg elevation, compression stockings, exercise",moderate
+Vitiligo,"Sun protection, cosmetic coverings, medical treatments",moderate
+Vertigo,"Epley maneuver if BPPV, stay hydrated",moderate
+Vasculitis,"Medical management, rest during flares",serious
+Viral gastroenteritis,"Hydration, BRAT diet, rest",moderate
+Vaginitis,"Yogurt with probiotics, cotton underwear, avoid irritants",minor
+Von Willebrand disease,"Medical management for bleeding, avoid NSAIDs",serious
+Vulvodynia,"Sitz baths, loose clothing, pelvic floor therapy",moderate
+Ventricular fibrillation,EMERGENCY - requires immediate CPR and defibrillation,emergency
+Vestibular neuritis,"Rest, vestibular rehab exercises, anti-nausea meds",moderate
+Whooping cough,"Humidifier, small frequent meals, medical care",serious
+West Nile virus,"Rest, fluids, medical care for severe cases",moderate
+Wilson's disease,"Medical management, low-copper diet",serious
+Warts,"Salicylic acid, duct tape method, cryotherapy",minor
+Wolff-Parkinson-White syndrome,"Medical management, possible ablation",serious
+Water retention,"Reduce sodium, elevate legs, move regularly",minor
+Wheat allergy,"Avoid wheat, carry epinephrine if anaphylaxis risk",serious
+Whiplash,"Gentle movement, pain management, physical therapy",moderate
+Wandering spleen,"Medical evaluation, possible splenectomy",serious
+Waldenstrom macroglobulinemia,"Medical treatment required, regular monitoring",serious
+Xerostomia,"Sugar-free gum, frequent sips water, humidifier",minor
+Xeroderma pigmentosum,"Strict sun protection, vitamin D supplements",serious
+X-linked agammaglobulinemia,"Medical management, infection prevention",serious
+Xerophthalmia,"Vitamin A supplementation, eye lubrication",moderate
+Xanthomatosis,"Cholesterol management, medical treatment",serious
+Xerosis,"Frequent moisturizing, humidifier, gentle cleansers",minor
+X-linked lymphoproliferative disease,"Medical management, infection prevention",serious
+Xerotic eczema,"Moisturize frequently, lukewarm showers",minor
+Xanthogranuloma,"Usually benign, medical monitoring",minor
+Xerocytosis,"Stay hydrated, medical monitoring",moderate
+Yellow fever,"Medical care, rest, fluids, prevention via vaccine",serious
+Yersiniosis,"Hydration, medical care if severe",moderate
+Yeast infection,"Probiotics, yogurt, antifungal treatments",minor
+Yawning syncope,"Lie down when feeling faint, stay hydrated",moderate
+Yips,"Mental training, change grip/technique",minor
+Yolk sac tumor,"Medical treatment required, often chemotherapy",serious
+Yusho disease,"Medical management, avoid PCB exposure",serious
+Yersinia pestis,EMERGENCY - requires immediate antibiotic treatment (plague),emergency
+Yawn-induced headache,"Treat underlying cause, pain management",minor
+Young syndrome,"Airway clearance techniques, fertility options",serious
+Zika virus,"Rest, fluids, avoid mosquito bites to prevent spread",moderate
+Zollinger-Ellison syndrome,"Medical management, acid-reducing medications",serious
+Zygomycosis,"Medical treatment essential, antifungal therapy",serious
+Zinc deficiency,"Zinc-rich foods (oysters, meat), supplements if needed",moderate
+Zellweger syndrome,"Supportive care, medical management",serious
+Zoster sine herpete,"Antiviral if early, pain management",moderate
+Zygapophyseal joint dysfunction,"Physical therapy, joint injections if needed",moderate
+Zieve's syndrome,"Abstain from alcohol, medical care",serious
+Zoonosis,"Varies by specific disease, often medical treatment",varies
+Zenker's diverticulum,"Small bites, chew thoroughly, possible surgery",moderate
+Allergic rhinitis,"Use saline nasal rinse, antihistamines, avoid known triggers, keep windows closed during high pollen, use air purifier",mild
+Allergic skin reaction,"Apply cold compress, use fragrance-free moisturiser, avoid irritant, take antihistamine, calamine lotion for itching, see doctor if spreading",mild
+Alzheimer's disease,"Mental exercises and puzzles, Mediterranean diet, regular physical activity, establish daily routine, social engagement, professional care required",serious
+Bulimia nervosa,"Professional therapy (CBT) required, establish regular eating schedule, avoid food triggers, build support network, treat electrolyte imbalance medically",serious
+Diabetes Type 1,"Insulin therapy is essential (medical), monitor blood glucose regularly, balanced low-GI diet, regular exercise, carry fast-acting sugar for hypoglycaemia",serious
+Diabetes Type 2,"Low-GI balanced diet, regular exercise, maintain healthy weight, monitor blood sugar, reduce refined sugar and carbs, medical management required",moderate
+Flu,"Rest and sleep, stay well hydrated, honey and lemon in warm water, steam inhalation, paracetamol for fever, isolate to avoid spreading",moderate
+Fungal skin infection,"Keep skin dry and clean, apply antifungal powder or cream, wear breathable cotton clothing, avoid sharing towels, tea tree oil diluted on affected area",minor
+Guillain-Barré syndrome,"Hospitalisation required, supportive care, physiotherapy during recovery, rest, nutritional support, medical supervision essential",serious
+Hepatitis B,"Rest, avoid alcohol completely, stay hydrated, high-protein low-fat diet, antiviral medication if prescribed, regular liver function monitoring",serious
+Hepatitis C,"Avoid alcohol, rest, healthy diet, antiviral treatment (medical), regular liver monitoring, avoid sharing needles or personal items",serious
+Herpes simplex,"Keep sores clean and dry, apply ice pack wrapped in cloth, avoid touching sores, lysine-rich foods, reduce stress, antiviral medication if prescribed",moderate
+Hyperthyroidism,"Avoid iodine-rich foods, reduce caffeine and stimulants, rest adequately, anti-thyroid medication or treatment required, beta-blockers if prescribed",serious
+Legionnaires disease,"Hospitalisation usually required, antibiotics prescribed by doctor, rest, stay hydrated, oxygen therapy if needed, do not self-treat",serious
+Myasthenia gravis,"Rest frequently, avoid heat and overexertion, eat soft foods if swallowing is difficult, medication management required, physiotherapy helps maintain strength",serious
+OCD,"Cognitive behavioural therapy (CBT) with ERP technique, mindfulness, reduce stress, regular exercise, limit caffeine, professional support required",moderate
+PCOS,"Low-GI diet, regular moderate exercise, maintain healthy weight, manage stress, inositol supplements may help, medical management of hormones required",moderate
+Yeast infection oral,"Rinse mouth with diluted apple cider vinegar or saltwater, eat plain yoghurt with live cultures, reduce sugar intake, antifungal medication if prescribed",minor
+Yeast infection vaginal,"Wear breathable cotton underwear, avoid scented products, eat yoghurt with live cultures, antifungal cream or suppository, see doctor if recurring",minor
