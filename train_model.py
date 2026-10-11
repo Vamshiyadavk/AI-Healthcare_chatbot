@@ -133,11 +133,11 @@ def build_pipeline() -> Pipeline:
         cv=3, method="sigmoid",
     )
     lr = LogisticRegression(
-        C=5.0, max_iter=2000, solver="lbfgs", class_weight="balanced", n_jobs=-1,
+        C=5.0, max_iter=2000, solver="lbfgs", class_weight="balanced", n_jobs=None,
     )
     ensemble = VotingClassifier(
         estimators=[("svc", svc), ("lr", lr)],
-        voting="soft", weights=[2, 1], n_jobs=-1,
+        voting="soft", weights=[2, 1], n_jobs=None,
     )
     return Pipeline([("tfidf", tfidf), ("clf", ensemble)])
 
@@ -175,8 +175,8 @@ def main():
     # 4. Cross-validation
     cv_scores = cross_val_score(
         pipeline, X_train, y_train,
-        cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42),
-        scoring="accuracy", n_jobs=-1,
+        cv=StratifiedKFold(n_splits=3, shuffle=True, random_state=42),
+        scoring="accuracy", n_jobs=1,
     )
     log.info("CV Accuracy    : %.2f%% ± %.2f%%", cv_scores.mean()*100, cv_scores.std()*100)
 

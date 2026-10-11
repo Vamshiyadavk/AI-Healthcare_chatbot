@@ -14,8 +14,17 @@ Improvements over v1:
 
 import os
 import re
+import sys
 import logging
 from functools import wraps
+
+# Ensure Windows console supports UTF-8 characters and emojis
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 import joblib
 import numpy as np
@@ -54,8 +63,13 @@ def _load_artefacts():
     rem_path   = os.path.join(BASE_DIR, "home_remedies.csv")
 
     if not (os.path.exists(model_path) and os.path.exists(vec_path)):
-        log.warning("Model files missing. Run: python train_model.py")
-        return None, None, None
+        log.info("Model files missing. Automatically training model now...")
+        try:
+            import train_model
+            train_model.main()
+        except Exception as exc:
+            log.error("Automatic training failed: %s", exc)
+            return None, None, None
 
     model      = joblib.load(model_path)
     vectorizer = joblib.load(vec_path)
