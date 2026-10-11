@@ -126,7 +126,7 @@ def augment_dataset(df: pd.DataFrame) -> pd.DataFrame:
 def build_pipeline() -> Pipeline:
     tfidf = TfidfVectorizer(
         analyzer="word", ngram_range=(1, 3),
-        min_df=1, sublinear_tf=True, max_features=80_000,
+        min_df=1, sublinear_tf=True, max_features=15_000,
     )
     svc = CalibratedClassifierCV(
         LinearSVC(C=1.0, max_iter=5000, class_weight="balanced"),
@@ -183,8 +183,8 @@ def main():
     # 5. Save model files (used by app.py)
     model_path = os.path.join(BASE_DIR, "disease_model.pkl")
     vec_path   = os.path.join(BASE_DIR, "tfidf_vectorizer.pkl")
-    joblib.dump(pipeline.named_steps["clf"],   model_path)
-    joblib.dump(pipeline.named_steps["tfidf"], vec_path)
+    joblib.dump(pipeline.named_steps["clf"],   model_path, compress=3)
+    joblib.dump(pipeline.named_steps["tfidf"], vec_path, compress=3)
     log.info("Saved: %s", model_path)
     log.info("Saved: %s", vec_path)
 

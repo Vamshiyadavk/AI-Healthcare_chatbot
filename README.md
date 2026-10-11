@@ -63,22 +63,26 @@ Machine Learning
 
 Algorithms Used
 
-- Random Forest
-- Decision Tree
+- TF-IDF N-Gram Feature Extraction (1-3 word n-grams)
+- Calibrated Support Vector Classifier (LinearSVC with Sigmoid calibration)
+- Regularized Logistic Regression Ensemble
 
 ---
 
 📂 Project Structure
 
-healthcarebot/
+AI-Healthcare_chatbot/
 │
-├── static/                 # CSS, JavaScript, Images
-├── templates/              # HTML Templates
-├── dataset/                # Training Dataset
-├── model/                  # Trained ML Models
-├── app.py                  # Main Flask Application
-├── train_model.py          # Model Training Script
-├── requirements.txt        # Dependencies
+├── templates/              # HTML Templates (index, result, error)
+│   ├── index.html          # Main symptom input interface
+│   ├── result.html         # Diagnosis and remedy report
+│   └── error.html          # User-friendly error page
+├── disease_symptoms.csv    # Dataset covering 281 conditions and symptoms
+├── home_remedies.csv       # Evidence-based home care & severity ratings
+├── app.py                  # Flask Web UI & RESTful API Service
+├── train_model.py          # Data augmentation, training & calibration script
+├── run.py                  # Direct runner script
+├── requirements.txt        # Cross-platform dependencies
 └── README.md               # Documentation
 
 ---
@@ -92,7 +96,7 @@ wheezing, shortness of breath, chest tightness, coughing
 Predicted Result
 
 Disease: Asthma
-Confidence: 59%
+Confidence: 70%+
 Severity: Serious
 Remedy: Practice breathing exercises, use steam inhalation, avoid triggers
 
@@ -108,7 +112,7 @@ Symptom Input Page
 Diagnosis Result Page
 
 - Displays predicted disease.
-- Shows confidence percentage.
+- Shows confidence percentage and differential diagnoses.
 - Provides remedies and severity analysis.
 - Alerts users if immediate medical attention is required.
 
@@ -122,7 +126,7 @@ git clone https://github.com/Vamshiyadavk/AI-Healthcare_chatbot.git
 
 2️⃣ Navigate to the Project Directory
 
-cd healthcarebot
+cd AI-Healthcare_chatbot
 
 3️⃣ Create a Virtual Environment (Optional)
 
@@ -142,11 +146,15 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
-6️⃣ Run the Application
+6️⃣ Train the Machine Learning Model
+
+python train_model.py
+
+7️⃣ Run the Application
 
 python app.py
 
-7️⃣ Open in Browser
+8️⃣ Open in Browser
 
 http://127.0.0.1:5000/
 

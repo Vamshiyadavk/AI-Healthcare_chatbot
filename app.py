@@ -62,6 +62,8 @@ def _load_artefacts():
     vec_path   = os.path.join(BASE_DIR, "tfidf_vectorizer.pkl")
     rem_path   = os.path.join(BASE_DIR, "home_remedies.csv")
 
+    remedies = pd.read_csv(rem_path) if os.path.exists(rem_path) else None
+
     if not (os.path.exists(model_path) and os.path.exists(vec_path)):
         log.info("Model files missing. Automatically training model now...")
         try:
@@ -69,11 +71,12 @@ def _load_artefacts():
             train_model.main()
         except Exception as exc:
             log.error("Automatic training failed: %s", exc)
-            return None, None, None
+            return None, None, remedies
 
     model      = joblib.load(model_path)
     vectorizer = joblib.load(vec_path)
-    remedies   = pd.read_csv(rem_path)
+    if remedies is None and os.path.exists(rem_path):
+        remedies = pd.read_csv(rem_path)
     log.info("Model & data loaded successfully.")
     return model, vectorizer, remedies
 
@@ -116,6 +119,9 @@ def predict_disease(symptoms: str) -> dict:
         raise ValueError(f"Symptoms text too long (max {app.config['MAX_SYMPTOMS_LEN']} chars).")
 
     cleaned = sanitise_symptoms(symptoms)
+    if not cleaned.strip():
+        raise ValueError("Please enter valid symptom keywords using alphabetic characters (e.g. 'fever, cough').")
+
     vec     = vectorizer.transform([cleaned])
 
     disease    = model.predict(vec)[0]
@@ -207,13 +213,30 @@ def api_diseases():
     return jsonify({"count": len(diseases), "diseases": diseases})
 
 
-@app.route("/api/predict", methods=["POST"])
+@app.route("/api/predict", methods=["GET", "POST"])
 @model_required
 def api_predict():
     """
     JSON endpoint.
-    Body: { "symptoms": "fever, cough, headache" }
+    GET: API documentation and sample schema.
+    POST: Predict disease from { "symptoms": "fever, cough, headache" }
     """
+    if request.method == "GET":
+        return jsonify({
+            "endpoint": "/api/predict",
+            "method": "POST",
+            "description": "Predict diseases and home remedies based on symptoms",
+            "headers": {"Content-Type": "application/json"},
+            "sample_request": {"symptoms": "fever, headache, cough"},
+            "sample_response": {
+                "disease": "Common Cold",
+                "confidence": 85.0,
+                "severity": "mild",
+                "remedy": "Drink warm fluids, rest, saline nasal spray",
+                "differentials": [{"disease": "Influenza", "probability": 10.5}]
+            }
+        })
+
     if not request.is_json:
         return jsonify({"error": "Content-Type must be application/json"}), 415
 
