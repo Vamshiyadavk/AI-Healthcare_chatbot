@@ -270,4 +270,8 @@ def server_error(exc):
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
+    print(f"\n==============================================")
+    print(f"  HealthBot AI Symptom Checker")
+    print(f"  Running on: http://localhost:{port}")
+    print(f"==============================================\n")
     app.run(host="0.0.0.0", port=port, debug=app.config["DEBUG"])
